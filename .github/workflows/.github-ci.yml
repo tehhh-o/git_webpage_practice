@@ -16,16 +16,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Build site
-        run: |
-          echo "Deploying GitHub Pages..."
-          mkdir -p public
-          echo "Hello GitHub Pages" > public/index.html
+        run: echo "Deploying GitHub Pages..."
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
